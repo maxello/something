@@ -468,15 +468,17 @@ h4 {
 }
 #content .image-wrapper img {
 	display: block;
-	width: 206px;
+	width: 220px;
 	height: 171px; 
 	border: 1px solid #ebebeb;
 	padding: 6px;
+	box-sizing: border-box;
 }
 #content .image-wrapper {
 	float: left;
 	background: #fff;
 	margin: 0 20px 0 0;
+
 }
 #content .image-wrapper:last-child {
 	margin: 0;
