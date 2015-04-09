@@ -58,7 +58,7 @@
 			<!-- Slider -->
 			<div class="slider-wrap">
 				<div class="slider">
-					<ul>
+					<ul class="clearfix">
 						<li><img src="images/slide1.jpg" alt="image description"></li>
 						<li><img src="images/slide1.jpg" alt="image description"></li>
 						<li><img src="images/slide1.jpg" alt="image description"></li>
@@ -68,10 +68,15 @@
 					<a href="#" class="btn-prev">Previous</a>
 					<a href="#" class="btn-next">Next</a>
 				</div>
+				<div class="item-holder">
+					<a href="#" class="active">Image 1</a>
+					<a href="#">Image 2</a>
+					<a href="#">Image 3</a>
+				</div>
 			</div>
 			<div class="suggestion">
-				<strong class="subtitle"><span>Monomuse is elegant.</span> Purchase now only <span class="price">$10</span></strong>
-				<a href="#" class="btn-buy">Buy now!</a>
+				<strong class="subtitle"><span>Monomuse is elegant.</span> Purchase now only <a href="#" class="price">$10</a></strong>
+				<a href="#" class="btn-black btn-buy">Buy now!</a>
 			</div>
 			<div class="three-columns clearfix">
 				<div class="column">
@@ -91,10 +96,16 @@
 			<div id="content">
 				<div class="row clearfix">
 					<section class="column col-left blog">
-						<h2>Recent posts</h2>
+						<h2 class="content-heading">Recent posts</h2>
+						<a href="#" class="item-title">Blog</a>
 						<article class="item">
 							<div class="image-wrapper">
-								<img src="images/img1.jpg" alt="image description">
+								<div class="view effect">
+									<img src="images/img1.jpg">
+	        						<div class="mask">
+										<a href="#" class="info">Read More</a>
+									</div>
+								</div>
 							</div>
 							<div class="holder">
 								<h4>Wild Wild North</h4>
@@ -108,40 +119,63 @@
 						</article>
 					</section>
 					<section class="column col-right">
-						<h2>About Us</h2>
+						<h2 class="content-heading">About Us</h2>
 						<div class="item disable">
 							<p><b>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</b></p>
 							<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-							<a href="#" class="btn-content btn-read-more">Read more</a>
-							<a href="#" class="btn-content btn-follow-us">Follow us</a>
+							<div class="btn-box clearfix">
+								<a href="#" class="btn-blue btn-read-more">Read more</a>
+								<a href="#" class="btn-cyan btn-follow-us">Follow us</a>
+							</div>
 						</div>	
 					</section>
 				</div>	
 				<section class="column col-center clearfix portfolio">
-					<h2>Latest projects</h2>
+					<h2 class="content-heading">Latest projects</h2>
+					<a href="#" class="item-title">Portfolio</a>
 					<div class="item clearfix">
 						<div class="image-wrapper">
-							<img src="images/img2.jpg" alt="image description">
+							<div class="view effect">
+								<img src="images/img2.jpg">
+        						<div class="mask">
+									<a href="#" class="info">Read More</a>
+								</div>
+							</div>
 							<a href="#" class="more">More</a>
 						</div>
 						<div class="image-wrapper">
-							<img src="images/img3.jpg" alt="image description">
+							<div class="view effect">
+								<img src="images/img3.jpg">
+        						<div class="mask">
+									<a href="#" class="info">Read More</a>
+								</div>
+							</div>
 							<a href="#" class="more">More</a>
 						</div>
 						<div class="image-wrapper">
-							<img src="images/img4.jpg" alt="image description">
+							<div class="view effect">
+								<img src="images/img4.jpg">
+        						<div class="mask">
+									<a href="#" class="info">Read More</a>
+								</div>
+							</div>
 							<a href="#" class="more">More</a>
 						</div>
 						<div class="image-wrapper">
-							<img src="images/img5.jpg" alt="image description">
+							<div class="view effect">
+								<img src="images/img5.jpg">
+        						<div class="mask">
+									<a href="#" class="info">Read More</a>
+								</div>
+							</div>
 							<a href="#" class="more">More</a>
 						</div>
 					</div>
 				</section>
 			</div>
 			<blockquote>
-				<p>Nemo enim ipsam voluptatem quia <span>voluptas</span> sit aspernatur aut odit aut fugit, sed quia consequuntur magni</p>
- 				<footer class="bq-footer"><span class="name">Thom Bjorke</span>, ANFG ltd.</footer>
+				<q>Nemo enim ipsam voluptatem quia <a href="#">voluptas</a> sit aspernatur aut odit aut fugit, sed quia consequuntur magni</q>
+ 				<cite><span class="name">Thom Bjorke</span>, ANFG ltd.</cite>
 			</blockquote>
 		</div>
 		<!-- Footer -->
