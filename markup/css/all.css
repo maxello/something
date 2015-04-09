@@ -1,27 +1,3 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-
 /* Fonts */
 @font-face {
     font-family: 'titilliumtext22l_rg';
@@ -82,12 +58,6 @@ p {
 }
 
 /* Headings */
-h1 {
-	font: 28px 'titilliumtext22l_rg', Arial, Helvetica, sans-serif;
-	display: inline-block;
-	color: #8a8a8a;
-	vertical-align: middle;
-}
 h2 {
 	font: 22px 'titilliumtext22l_rg', Arial, Helvetica, sans-serif;
 	color: #1cc1cb;
@@ -124,6 +94,7 @@ h3 {
 	counter-increment: counter;
 	position: relative;
 	padding: 0 0 18px 31px;
+	margin: 0;
 }
 h3:before {
 	position: absolute;
@@ -140,6 +111,7 @@ h3:before {
 h4 {
 	font: 18px 'titilliumtext22l_rg', Arial, Helvetica, sans-serif;
 	color: #5a5a5a;
+	margin: 0;
 }
 /* Clearfix */
 .clearfix:after {
@@ -169,6 +141,7 @@ h4 {
 }
 #header .address {
     float: left;
+    font-style: normal;
 }
 #header .phone {
 	letter-spacing: -0.7px;
@@ -232,8 +205,9 @@ h4 {
 /* Navigation */
 #nav {
 	float: right;
-	padding: 14px 0 0 0;
 	list-style: none;
+	padding: 14px 0 0 0;
+	margin: 0;
 }
 #nav > li {
 	float: left;
@@ -256,21 +230,22 @@ h4 {
 }
 #nav ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
     position: absolute;
     z-index: 10;
-    left: -9999px;
-    opacity: 0;
+    overflow: hidden;
+    max-height: 0;
     background: #fff;
     -webkit-border-radius: 0 0 3px 3px;
 	-moz-border-radius: 0 0 3px 3px;
 	-o-border-radius: 0 0 3px 3px;
 	border-radius: 0 0 3px 3px;
 	width: 160px;
-	-webkit-transition: 0.25s linear opacity;
-	-moz-transition: 0.25s linear opacity;
-	-o-transition: 0.25s linear opacity;
-	transition: 0.25s linear opacity;
-	padding: 2px 0 10px 0;
+	-webkit-transition: max-height 0.1s ease-out;
+	-moz-transition: max-height 0.1s ease-out;
+	-o-transition: max-height 0.1s ease-out;
+	transition: max-height 0.1s ease-out;
 }
 #nav ul li {
 	border-bottom: 1px solid #f6f6f6; 
@@ -286,12 +261,17 @@ h4 {
 	border: 0;
 }
 #nav li:hover ul { 
-	left: 0;
-    opacity: 1;
+	display: block;
+	padding: 2px 0 10px;
+	max-height: 500px;
+	-moz-transition: max-height 0.25s ease-in;
+	-webkit-transition: max-height 0.25s ease-in;
+	-o-transition: max-height 0.25s ease-in;
+	transition: max-height 0.25s ease-in;
 }
-#nav li:last-child:hover ul { 
-    left: -94px; 
-    opacity: 1;
+#nav li:last-child ul { 
+    right: 0;
+    left: inherit; 
 }
 #nav li:hover a {
     border-bottom: 5px solid #b0eeef;
@@ -358,7 +338,10 @@ h4 {
 	 list-style-type: none;
 }
 .slider ul {
- 	width: 9999px; 
+ 	width: 9999px;
+ 	margin: 0;
+ 	padding: 0;
+ 	list-style: none; 
 }
 .slider ul li {
 	 list-style-type: none;
@@ -393,8 +376,12 @@ h4 {
 .suggestion .subtitle {
 	margin: 0 50px 0 0;
 	vertical-align: middle;
+	font-weight: normal;
 }
 .suggestion .subtitle span {
+	color: #8a8a8a;
+}
+.suggestion .subtitle .price {
 	color: #40cbcd;
 }
 .suggestion .btn-buy {
@@ -678,6 +665,8 @@ h4 {
 }
 #footer .column ul {
 	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 #footer .column li {
 	margin: 0 0 15px 0;
@@ -752,6 +741,9 @@ h4 {
 
 #footer cite a {
 	color: #54cdd1;
+}
+#footer blockquote {
+	margin: 0;
 }
 #footer .tweets-footer p {
 	font-size: 10px;
