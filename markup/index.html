@@ -5,6 +5,8 @@
 	<title>Monomuse</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/all.css">
+	<script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/scripts.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -57,8 +59,8 @@
 		<div id="main" class="section">
 			<!-- Slider -->
 			<div class="slider-wrap">
-				<div class="slider">
-					<ul class="clearfix">
+				<div class="image-wrap">
+					<ul class="clearfix slides-holder">
 						<li><img src="images/slide1.jpg" alt="image description"></li>
 						<li><img src="images/slide1.jpg" alt="image description"></li>
 						<li><img src="images/slide1.jpg" alt="image description"></li>
@@ -68,11 +70,11 @@
 					<a href="#" class="btn-prev">Previous</a>
 					<a href="#" class="btn-next">Next</a>
 				</div>
-				<div class="item-holder">
-					<a href="#" class="active">Image 1</a>
-					<a href="#">Image 2</a>
-					<a href="#">Image 3</a>
-				</div>
+				<ul class="nav-btns">
+					<li rel="0" class="active">Image 1</a>
+					<li rel="1">Image 2</a>
+					<li rel="2">Image 3</a>
+				</ul>
 			</div>
 			<div class="suggestion">
 				<strong class="subtitle"><span>Monomuse is elegant.</span> Purchase now only <a href="#" class="price">$10</a></strong>
@@ -237,5 +239,11 @@
 			</div>	
 		</footer>	
 	</div>
+	<script>
+        (function (){
+            var $sliderWrap = $('.slider-wrap');
+            window.slider = new Slider($sliderWrap);
+        })();
+    </script>
 </body>
 </html>

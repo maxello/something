@@ -50,6 +50,8 @@ p {
 .wrapper {
 	width: 100%;
 	height: 100%;
+	position: relative;
+	overflow: hidden;
 }
 .section {
 	width: 1000px;
@@ -331,23 +333,20 @@ h4 {
     -o-transform: rotate(3deg);
     transform: rotate(3deg);
 }
-.slider {
-	 z-index: 1;
-	 width: 982px;
-	 height: 320px;
-	 overflow: hidden;
+.image-wrap {
+	z-index: 1;
+	width: 982px;
+	height: 320px;
+	overflow: hidden;
 }
-.slider ul,
-.slider li {
-	 list-style-type: none;
-}
-.slider ul {
+.image-wrap ul {
+	list-style-type: none;
  	width: 9999px;
  	margin: 0;
  	padding: 0;
  	list-style: none; 
 }
-.slider ul li {
+.image-wrap ul li {
 	 list-style-type: none;
 	 float: left;
 	 width: 982px;
@@ -370,12 +369,15 @@ h4 {
 	background: url(../images/sprite.png) -17px -11px no-repeat;
 	right: -32px;
 }
-.slider-wrap .item-holder {
+.slider-wrap .nav-btns {
 	position: absolute;
 	bottom: 10px;
 	right: 35px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 } 
-.slider-wrap .item-holder a {
+.slider-wrap .nav-btns li {
 	width: 12px;
 	height: 12px;
 	background: url(../images/sprite.png) -48px 0 no-repeat;
@@ -383,8 +385,10 @@ h4 {
 	overflow: hidden;
 	display: inline-block;
 	z-index: 20;
+	cursor: pointer;
+	margin: 0 2px 0 0;
 }
-.slider-wrap .item-holder a.active {
+.slider-wrap .nav-btns li.active {
 	background: url(../images/sprite.png) -35px 0 no-repeat;
 }
 /* Suggestion */
